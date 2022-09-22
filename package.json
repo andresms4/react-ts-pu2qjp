@@ -9,9 +9,10 @@
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.2",
     "@types/styled-components": "^5.1.26",
+    "jest-styled-components": "^7.1.1",
     "pokenode-ts": "^1.17.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-is": ">= 16.8.0",
     "react-loader-spinner": "^5.3.4",
     "styled-components": "^5.3.5"
@@ -19,11 +20,19 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react-scripts": "latest"
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@types/jest": "^29.0.3",
+    "babel-jest": "^29.0.3",
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.0.3",
+    "react-scripts": "latest",
+    "react-test-renderer": "^18.2.0",
+    "ts-jest": "^29.0.1"
   },
   "browserslist": {
     "production": [
@@ -36,5 +45,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
+    }
   }
 }
